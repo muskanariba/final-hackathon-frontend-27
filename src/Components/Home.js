@@ -8,8 +8,8 @@ function App() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // New state for authentication
-  const navigate = useNavigate(); // Initialize navigate hook
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     // Check if the user is already authenticated when the app loads
@@ -38,17 +38,16 @@ function App() {
     try {
       const response = await axios.post('http://localhost:5000/login', { email, password });
       
-      // If login is successful
+     
       if (response.status === 200) {
         alert('Login successful!');
         setEmail('');
         setPassword('');
         
-        // Set authentication status
         setIsAuthenticated(true);
         localStorage.setItem('user', JSON.stringify({ email }));
 
-        // Navigate to Dashboard after successful login
+        
         navigate('/dashboard');
       }
     } catch (error) {
