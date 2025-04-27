@@ -1,0 +1,166 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* App Container */
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* App Header */
+.App-header {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+.App-header h1 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Styles */
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #4a90e2;
+}
+
+/* Submit Button Styles */
+button[type="submit"] {
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #357ab7;
+}
+
+/* Toggle Button Styles (Login/Signup Toggle) */
+button[type="button"] {
+  background-color: transparent;
+  border: 1px solid #4a90e2;
+  color: #4a90e2;
+  padding: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+button[type="button"]:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* Input Focus Styles */
+input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .App-header {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .App-header h1 {
+    font-size: 22px;
+  }
+
+  input, button {
+    font-size: 14px;
+  }
+}
+/* General styling for the toggle button */
+.toggle-button {
+  background-color: #28a745; /* Green background */
+  color: #fff; /* White text */
+  padding: 12px 24px; /* Padding around the text */
+  border: none; /* Remove the border */
+  border-radius: 30px; /* Rounded edges */
+  font-size: 16px; /* Font size */
+  font-weight: 600; /* Slightly bold text */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center the text */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover and focus */
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Subtle shadow for depth */
+  margin-top: 20px;
+}
+
+/* Hover state - slightly darker background */
+.toggle-button:hover {
+  background-color: #218838; /* Darker green */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3); /* More prominent shadow */
+}
+
+/* Active state - when button is clicked */
+.toggle-button:active {
+  background-color: #1e7e34; /* Even darker green when clicked */
+  transform: translateY(0); /* Reset lift effect */
+}
+
+/* Focus state for accessibility - adds a custom focus ring */
+.toggle-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.5); /* Green focus ring */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .toggle-button {
+    width: 100%; /* Full-width button on smaller screens */
+    font-size: 14px; /* Smaller font size on smaller screens */
+    padding: 14px; /* Slightly increased padding */
+  }
+}

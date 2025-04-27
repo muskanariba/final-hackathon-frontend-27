@@ -1,0 +1,307 @@
+/* Main Dashboard Container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #f4f6f9;
+    height: 100vh;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 15px;
+    background-color: #333;
+  }
+  
+  .logout-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Task Input Section */
+  .task-input-section {
+    margin-bottom: 20px;
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-input-section input,
+  .task-input-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .task-input-section button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .task-input-section button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Task Columns */
+  .task-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+    width: 1200px;
+  }
+  
+  .task-column {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    overflow-y: auto;
+  }
+  
+  .task-column h3 {
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* To Do Column */
+  .task-column.to-do {
+    background-color: #f4f8fc;
+    border-left: 5px solid #007bff;
+  }
+  
+  /* In Progress Column */
+  .task-column.in-progress {
+    background-color: #eaf7e9;
+    border-left: 5px solid #ff9800;
+  }
+  
+  /* Done Column */
+  .task-column.done {
+    background-color: #e7f4e7;
+    border-left: 5px solid #4caf50;
+  }
+  
+  /* Task Card Styling */
+  .task-card {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .task-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .task-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .task-card small {
+    color: #999;
+  }
+  
+  /* Task Actions */
+  .task-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .task-actions button {
+    background-color: #225f93;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .task-actions button:hover {
+    background-color: #45a049;
+  }
+  
+  .task-actions button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+  /* Task Actions Button Styling */
+.task-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 48%;  /* Make buttons slightly smaller than the card width to fit side by side */
+    margin-top: 10px;
+  }
+  
+  /* To Do Button */
+  .task-actions .to-do-btn {
+    background-color: #007bff;  /* Blue for To Do */
+    color: white;
+  }
+  
+  .task-actions .to-do-btn:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+    transform: translateY(-3px);
+  }
+  
+  /* In Progress Button */
+  .task-actions .in-progress-btn {
+    background-color: #ff9800;  /* Orange for In Progress */
+    color: white;
+  }
+  
+  .task-actions .in-progress-btn:hover {
+    background-color: #e68900;  /* Darker orange on hover */
+    transform: translateY(-3px);
+  }
+  
+  /* Done Button */
+  .task-actions .done-btn {
+    background-color: #4caf50;  /* Green for Done */
+    color: white;
+  }
+  
+  .task-actions .done-btn:hover {
+    background-color: #388e3c;  /* Darker green on hover */
+    transform: translateY(-3px);
+  }
+  
+  /* Disabled Button (when action is not possible) */
+  .task-actions button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+    transform: none;  /* Remove hover effect on disabled button */
+  }
+  /* Full-screen Navbar */
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333; /* Dark background for navbar */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Logo or Title in Navbar */
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Logout Button Styling */
+  .logout-btn {
+    background-color: #f44336;  /* Red for logout */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover effect for Logout Button */
+  .logout-btn:hover {
+    background-color: #e53935;  /* Darker red */
+    transform: translateY(-3px);
+  }
+  
+  /* Buttons for Different Actions (To Do, In Progress, Done) */
+  .task-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 45%;
+    margin-top: 10px;
+  }
+  
+  /* To Do Button */
+  .task-actions .to-do-btn {
+    background-color: #007bff;  /* Blue for To Do */
+    color: white;
+  }
+  
+  .task-actions .to-do-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  
+  /* In Progress Button */
+  .task-actions .in-progress-btn {
+    background-color: #ff9800;  /* Orange for In Progress */
+    color: white;
+  }
+  
+  .task-actions .in-progress-btn:hover {
+    background-color: #e68900;
+    transform: translateY(-3px);
+  }
+  
+  /* Done Button */
+  .task-actions .done-btn {
+    background-color: #4caf50;  /* Green for Done */
+    color: white;
+  }
+  
+  .task-actions .done-btn:hover {
+    background-color: #388e3c;
+    transform: translateY(-3px);
+  }
+  
+  /* Disabled Button */
+  .task-actions button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
